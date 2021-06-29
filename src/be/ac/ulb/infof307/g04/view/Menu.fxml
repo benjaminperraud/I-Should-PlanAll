@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.MenuController">
+   <StackPane layoutX="76.0" layoutY="76.0" prefHeight="392.0" prefWidth="658.0">
+      <children>
+          <ScrollPane id="scroll" fx:id="scrollPane" hmax="0.0" prefHeight="506.0" prefWidth="658.0">
+            <content>
+                  <Accordion fx:id="accordionListProjects" prefHeight="392.0" prefWidth="656.0" />
+            </content>
+          </ScrollPane>
+          <Label fx:id="noProjLabel" prefHeight="17.0" />
+      </children>
+   </StackPane>
+    <Button fx:id="buttonAdd" layoutX="76.0" layoutY="472.0" mnemonicParsing="false" onAction="#handleAddNewProject" prefHeight="26.0" prefWidth="141.0" text="+ Ajouter un projet" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="76.0">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <Text fx:id="textError" fill="#ed0707" layoutX="297.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.13671875" />
+   <MenuButton fx:id="userMenuButton" layoutX="841.0" layoutY="33.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" text="MenuButton" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+     <items>
+       <MenuItem fx:id="editProfileAction" mnemonicParsing="false" onAction="#handleEditProfileAction" text="Mon compte" />
+         <MenuItem fx:id="everyProjectStatsButton" mnemonicParsing="false" onAction="#handleStatsAction" text="Statistiques des projets" />
+       <MenuItem fx:id="deconnexionAction" mnemonicParsing="false" onAction="#handleDisconnectionAction" text="Se déconnecter" />
+     </items>
+   </MenuButton>
+   <Button fx:id="collaborationButton" layoutX="775.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleCollaboration" prefHeight="26.0" prefWidth="120.0" text="Collaborer " />
+   <Button fx:id="waitingCollabs" layoutX="750.0" layoutY="443.0" mnemonicParsing="false" onAction="#handleWaitingCollab" text="Voir Collaboration en attente" />
+   <Button layoutX="739.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleImportExport" prefHeight="26.0" prefWidth="192.0" text="Importer/Exporter un projet" />
+   <MenuBar layoutY="2.0">
+     <menus>
+       <Menu mnemonicParsing="false" onAction="#handleHelp" text="Help">
+         <items>
+           <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="797.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../resources/collaborer.png" />
+      </image></ImageView>
+   <ImageView fitHeight="56.0" fitWidth="68.0" layoutX="807.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../resources/importer.png" />
+      </image></ImageView>
+   <ImageView fitHeight="36.0" fitWidth="48.0" layoutX="778.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../resources/profil.png" />
+      </image>
+   </ImageView>
+   <Line endX="100.0" layoutX="835.0" layoutY="54.0" startX="-69.5" />
+   <Line endX="101.5" endY="1.0" layoutX="662.0" layoutY="-2.0" startX="102.5" startY="55.5" />
+</AnchorPane>

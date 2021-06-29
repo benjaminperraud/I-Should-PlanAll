@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.stats.EveryProjectStatsViewController">
+   <children>
+      <TabPane layoutX="81.0" layoutY="21.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Collaborateur(s)">
+               <content>
+                  <BarChart fx:id="collaborationBarChart" title="Collaborateur(s)">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </content>
+          </Tab>
+            <Tab text="Temps">
+               <content>
+                  <BarChart fx:id="timeBarChart" title="Temps estimé et temps réel ">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="heure(s)" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </content>
+            </Tab>
+          <Tab text="Tâche(s)">
+               <content>
+                  <BarChart fx:id="tasksBarChart" title="Tâche(s) non finie(s) et tâche(s) totale(s) ">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

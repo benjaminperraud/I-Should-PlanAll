@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="374.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.stats.ProjectStatsViewController">
+   <children>
+      <Label fx:id="personStats" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="111.0" prefHeight="35.0" prefWidth="39.0" text="144" textAlignment="JUSTIFY">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="projectTitle" layoutX="50.0" layoutY="30.0" prefHeight="27.0" prefWidth="369.0" text="Statistiques de :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="timeBarChart" layoutX="285.0" layoutY="75.0" prefHeight="244.0" prefWidth="338.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="heure(s)" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <ImageView fx:id="collaboratorLogo" fitHeight="76.0" fitWidth="80.0" layoutX="58.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/collab.png" />
+         </image>
+      </ImageView>
+        <PieChart fx:id="taskPieChart" animated="false" labelLineLength="50.0" layoutX="58.0" layoutY="172.0" prefHeight="162.0" prefWidth="198.0" />
+      <Label layoutX="149.0" layoutY="87.0" text="Collaborateur(s) :" />
+      <Pane layoutX="44.0" layoutY="326.0" prefHeight="27.0" prefWidth="273.0">
+         <children>
+            <Label layoutX="36.0" layoutY="5.0" text="Tâche(s) finie(s)" />
+            <Circle fill="#e19418" layoutX="137.0" layoutY="14.0" radius="9.0" stroke="#e19418" strokeType="INSIDE" />
+            <Label layoutX="157.0" layoutY="5.0" prefHeight="17.0" prefWidth="116.0" text="Tâche(s) non finie(s)" />
+            <Circle fill="#df5f30" layoutX="21.0" layoutY="14.0" radius="9.0" stroke="#df5f30" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

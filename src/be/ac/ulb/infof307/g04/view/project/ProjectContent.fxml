@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="372.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.project.ProjectContentController">
+    <TabPane layoutY="32.0" prefHeight="290.0" prefWidth="730.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="taskTab" text="Tâche(s)">
+                    <content>
+                        <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="314.0" prefWidth="730.0">
+                            <content>
+                                <Accordion fx:id="taskAccordion" prefHeight="270.0" prefWidth="716.0">
+                                    <panes>
+                                    </panes>
+                                </Accordion>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="subProjTab" text="Sous-projet(s)">
+                    <content>
+                        <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="211.0" prefWidth="600.0">
+                            <content>
+                                <Accordion fx:id="subProjAccordion" prefHeight="211.0" prefWidth="600.0">
+                                    <panes>
+                                    </panes>
+                                </Accordion>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="addTaskButton" layoutY="3.0" mnemonicParsing="false" onAction="#handleAddTask" prefHeight="26.0" prefWidth="133.0" text="Ajouter une tâche" />
+        <Button fx:id="addSubProjectButton" layoutX="142.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleAddSubProject" prefHeight="26.0" prefWidth="156.0" text="Ajouter un sous-projet" />
+</AnchorPane>

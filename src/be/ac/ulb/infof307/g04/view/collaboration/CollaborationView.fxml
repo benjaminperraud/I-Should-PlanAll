@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="202.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.collaboration.CollaborationViewController">
+   <children>
+      <Label layoutX="57.0" layoutY="48.0" text="Nom du collaborateur:" />
+      <Label layoutX="74.0" layoutY="99.0" text="Choix du projet:" />
+      <TextField fx:id="idTextField" layoutX="211.0" layoutY="44.0" prefHeight="25.0" prefWidth="171.0" />
+      <ComboBox fx:id="projectComboBox" layoutX="211.0" layoutY="95.0" prefHeight="26.0" prefWidth="171.0" />
+      <ButtonBar layoutX="192.0" layoutY="148.0" prefHeight="40.0" prefWidth="187.0">
+        <buttons>
+          <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="91.0" text="Annuler" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddCollab" prefHeight="25.0" text="Ajouter" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.reminder.ReminderViewController">
+    <children>
+        <AnchorPane prefHeight="209.0" prefWidth="731.0">
+            <TabPane layoutY="32.0" prefHeight="283.0" prefWidth="485.0" tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+                    <Tab fx:id="taskTab" text="Tâche(s)">
+                        <content>
+                            <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="251.0" prefWidth="303.0">
+                                <content>
+                                    <Accordion fx:id="taskAccordion" prefHeight="310.0" prefWidth="600.0">
+                                        <panes>
+                                        </panes>
+                                    </Accordion>
+                                </content>
+                            </ScrollPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="ProjTab" text="Projet(s)">
+                        <content>
+                            <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="266.0" prefWidth="729.0">
+                                <content>
+                                    <Accordion fx:id="projAccordion" prefHeight="254.0" prefWidth="485.0">
+                                        <panes>
+                                        </panes>
+                                    </Accordion>
+                                </content>
+                            </ScrollPane>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+         <Label fx:id="reminderMessage" layoutX="3.0" layoutY="8.0" prefHeight="17.0" prefWidth="399.0" />
+            <VBox.margin>
+                <Insets left="10.0" right="15.0" top="10.0" />
+            </VBox.margin>
+        </AnchorPane>
+        <ButtonBar prefHeight="52.0" prefWidth="620.0">
+            <buttons>
+                <Button fx:id="OKButton" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+            </buttons>
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+        </ButtonBar>
+    </children>
+</VBox>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.project.ProjectInfoDisplayController">
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="180.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="420.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="0.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="40.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Description" GridPane.rowIndex="1" />
+                <Label text="Titre" />
+                <Label text="Date de fin" GridPane.rowIndex="2" />
+                <Label text="Étiquettes" GridPane.rowIndex="3" />
+                <TextField fx:id="titleField" GridPane.columnIndex="1" />
+                <TextArea fx:id="descriptionArea" prefHeight="48.0" prefWidth="368.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <DatePicker fx:id="dueDate" prefHeight="25.0" prefWidth="117.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <ComboBox fx:id="labelComboBox" prefWidth="150.0" />
+                        <Button mnemonicParsing="false" onAction="#handleRemoveLabel" text="Retirer" />
+                        <Button mnemonicParsing="false" onAction="#handleAddLabel" text="Ajouter" />
+                    </children>
+                </HBox>
+                <Text fx:id="emptyTitleText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="184.0">
+                    <GridPane.margin>
+                        <Insets left="26.0" />
+                    </GridPane.margin>
+                </Text>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </GridPane>
+        <ButtonBar prefHeight="52.0" prefWidth="620.0">
+            <buttons>
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" text="Retour" />
+                <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#handleModify" text="Modifier" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDelete" text="Supprimer" textFill="#eb0a0a" />
+            </buttons>
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+        </ButtonBar>
+      <Text fx:id="emptyTitleText1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="13.0" />
+    </children>
+</VBox>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.account.AccountCreationController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0">
+          <children>
+              <Label layoutX="247.0" layoutY="14.0" minWidth="-Infinity" text="Inscription">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+              </Label>
+              <GridPane layoutX="266.0" layoutY="148.0" prefHeight="405.0" prefWidth="430.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                      <Label text="Nom d'utilisateur" GridPane.rowIndex="1" />
+                      <Label text="Prénom" GridPane.rowIndex="3" />
+                      <Label text="Nom de famille" GridPane.rowIndex="5" />
+                      <Label text="Adresse mail" GridPane.rowIndex="7" />
+                      <Label text="Mot de passe" GridPane.rowIndex="9" />
+                  <Label text="Confirmer le mot de passe" GridPane.rowIndex="11" />
+                      <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                      <TextField fx:id="firstNameField" prefHeight="25.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                      <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                      <TextField fx:id="mailField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                      <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <PasswordField fx:id="confirmPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <Text fx:id="confirmPasswordTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="250.13671875" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Text fx:id="passwordTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="259.13671875" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Text fx:id="usernameTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Text fx:id="mailTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="248.13671875" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Text fx:id="firstNameTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="245.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Text fx:id="lastNameTextError" fill="#a11d1d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="250.13671875" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  </children>
+                  <VBox.margin>
+                      <Insets left="10.0" right="10.0" />
+                  </VBox.margin>
+              </GridPane>
+            <CheckBox fx:id="conditionUtilisation" mnemonicParsing="false" prefHeight="17.0" prefWidth="430.0" text="Accepter les Conditions d'utilisation" textFill="#163c97" />
+              <ButtonBar prefHeight="25.0" prefWidth="440.0">
+                  <buttons>
+                  <Button fx:id="condition" mnemonicParsing="false" onAction="#handleCondition" text="Lire condition" />
+                      <Button fx:id="registerButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleConfirm" text="S'inscrire" />
+                      <Button fx:id="cancelButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleCancel" text="Annuler" />
+                  </buttons>
+                  <VBox.margin>
+                      <Insets bottom="10.0" right="10.0" top="20.0" />
+                  </VBox.margin>
+              </ButtonBar>
+          </children>
+      </VBox>
+   </children>
+</AnchorPane>

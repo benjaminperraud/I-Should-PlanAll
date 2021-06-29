@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="317.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.task.AddTaskDialogController">
+    <children>
+        <TextField fx:id="taskDescriptionField" layoutX="64.0" layoutY="82.0" prefHeight="55.0" prefWidth="331.0" />
+        <Label layoutX="68.0" layoutY="58.0" text="Description de la tâche" />
+        <DatePicker fx:id="startDate" layoutX="66.0" layoutY="235.0" prefHeight="25.0" prefWidth="109.0" />
+        <DatePicker fx:id="endDate" layoutX="285.0" layoutY="235.0" prefHeight="25.0" prefWidth="109.0" />
+        <Label layoutX="68.0" layoutY="208.0" text="Début de la tâche" />
+        <Label layoutX="301.0" layoutY="208.0" text="Fin de la tâche" />
+        <Button fx:id="cancelButton" layoutX="325.0" layoutY="278.0" minWidth="10.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" text="Annuler">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Button fx:id="applyChangesButton" layoutX="395.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" text="Ajouter" />
+        <TextField fx:id="titleField" layoutX="120.0" layoutY="14.0" prefHeight="25.0" prefWidth="274.0" />
+        <Label layoutX="68.0" layoutY="18.0" text="Titre" />
+        <Label layoutX="69.0" layoutY="167.0" text="Choix du collaborateur" />
+        <ComboBox fx:id="projectComboBox" layoutX="241.0" layoutY="163.0" prefHeight="26.0" prefWidth="153.0" />
+    </children>
+</AnchorPane>

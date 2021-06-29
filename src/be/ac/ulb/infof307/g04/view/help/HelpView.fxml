@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="327.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.help.HelpViewController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="23.0" layoutY="30.0" prefHeight="300.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Général">
+               <content>
+                  <TextArea prefHeight="354.0" prefWidth="667.0" text="Dans cette application il est possible de faire plusieurs choses. &#10;&#10;Vous pouvez : &#10; - créer et éditer des nouveaux projets;&#10;&#10; - collaborer avec d’autres utilisateurs sur ces projets;&#10;&#10; - exporter et importer ces projets de façon locale ou sur un cloud.&#10;&#10;Ces fonctionnalités seront décrites plus en détails dans les sections suivantes.&#10;" />
+               </content>
+            </Tab>
+          <Tab text="Projets">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Depuis le menu principal, il est possible d’ajouter un nouveau projet. &#10;Le projet nouvellement créé s’ajoute à la liste des projets déjà existants. &#10;En affichant le projet, un résumé des principales informations apparaissent, ainsi que 3 boutons : &#10; - modifier : permet de modifier les informations du projet  (le titre, la description, la date de fin ainsi que les étiquettes &#10;   du projet), &#10;   ou de le supprimer définitivement en cliquant sur le bouton supprimer (une popup de confirmation s’ouvre alors);&#10;&#10; - sélectionner : afficher les tâches et sous-projets du projet sélectionné, et en ajouter de nouveaux. &#10;    Une tâche est une chose à faire avant une date donnée, tandis qu’un sous projet est un projet à part entière, &#10;   qui dépend du projet en question;&#10;&#10; - Statistiques : Affiche les statistiques du projet. Les 4 nombres indiquent respectivement le nombre de collaborateurs sur le projet, &#10;    le nombre de tâches non finies, le temps estimé (qui correspond à la durée entre la création du projet et la date de fin),&#10;    et le temps réel (qui correspond au temps écoulé depuis la création du projet).&#10;" />
+               </content>
+            </Tab>
+            <Tab text="Collaboration">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Pour collaborer sur un projet avec un ou plusieurs autre(s) utilisateur(s), il suffit de :&#10; - cliquer sur le bouton “collaboration”;&#10;&#10; - entrer le nom d’utilisateur d’un autre utilisateur existant dans le champ prévu à cet effet;&#10;&#10; - choisir le projet sur lequel vous désirez collaborer dans le menu déroulant;&#10;&#10;Ensuite, l’utilisateur à qui la requête de collaboration à été envoyé devra :&#10; - cliquer sur le bouton “voir collaboration en attente”;&#10;&#10; -sélectionner la demande collaboration qui l'intéresse;&#10;&#10; - cliquer sur “accepter”;&#10;&#10;Une fois que la collaboration est acceptée, tous les utilisateurs collaborant sur ce projet verront les modifications effectuées.&#10;Il est aussi possible d’ajouter un ou plusieurs utilisateurs collaborant sur le projet, sur une tâche, &#10;afin que celle-ci soit destinée à certains utilisateurs.&#10;" />
+               </content>
+            </Tab>
+            <Tab text="Importation et exportation">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Un projet existant peut être exporté, pour le sauvegarder ailleurs. &#10;Un projet exporté peut ensuite être importé depuis un autre compte ou un autre ordinateur. &#10;Pour cela, il suffit de cliquer sur le bouton “Importer/Exporter un projet” depuis le menu principal. &#10;La fenêtre qui s’ouvre contient 2 onglets : un pour importer un projet,&#10;l’autre pour exporter un projet parmi ceux actuellement dans la liste de vos projets.&#10;&#10;L’importation et l’exportation peuvent se faire de 3 manières différentes :&#10; - localement, sur l’ordinateur. Pour importer un projet, il suffit de le sélectionner depuis l’explorateur, &#10;   pour l’exporter il suffit de choisir l’emplacement où sauvegarder le fichier;&#10;&#10; - sur Google Drive;&#10;&#10; - sur Dropbox,&#10;&#10;&#10;Pour pouvoir utiliser les services de cloud, l’utilisateur doit dans un premier connecter son compte du service utilisé à l'application.&#10;&#10;Pour Dropbox : &#10;Pour utiliser Dropbox, l'application vous demande de rentrer votre token. Pour obtenir votre token, suiver les étapes suivantes :&#10; &#10;&#9;-aller sur https://www.dropbox.com/developers/apps depuis votre navigateur et connectez-vous à votre compte Dropbox&#10;&#9;-cliquer sur &quot;Create app&quot;&#10;&#9;-Sélectionnez &quot;Scoped access&quot;, &quot;Full Dropbox&quot;, et choisissez un nom&#10;&#9;-Une fois créé, allez dans l'onglet Permissions, et sélectionnez &quot;account_info.write&quot;, &quot;files.metada.write&quot;, &quot;files.content.write&quot; et &quot;files.content.read&quot;&#10;&#9;-Revenez ensuite dans l'onglet Paramètres et cliquez sur &quot;Generate acess token&quot;&#10;&#9;Note : vous pouvez sélectionner l'option &quot;No expiration&quot; pour que votre token reste toujours valide et ne pas devoir en remettre un nouveau plus tard.&#10;&#10;Copiez le token qui apparait et collez le dans la fenêtre de l'application qui le demande.&#10;&#10;&#10;&#10;Pour Google Drive : &#10;La première fois que ce service sera utilisé, vous serez redirigé vers votre navigateur, &#10;où vous devez vous connecter à votre compte google. Vous devez ensuite autoriser l’accès à vos fichiers google Drive. &#10;Une fois que c’est fait, vous pouvez fermer la page du navigateur et revenir sur l’application.&#10;&#10;" />
+               </content>
+            </Tab>
+            <Tab text="Mon compte">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Si vous cliquez sur le bouton avec votre nom d’utilisateur en haut à droite du menu vous aurez des options proposées :&#10; - “Mon compte” : qui vous permet de modifier les informations relatives à votre compte;&#10;&#10; - “Statistiques des projets” : qui vous permet de visualiser les statistiques de tous les projets présent sur votre compte;&#10;&#10; - “Se déconnecter&quot; : vous permet de vous déconnecter et de revenir à la fenêtre de connexion.&#10;" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+       <Button fx:id="cancelButton" layoutX="600.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleCancel" text="Fermer" />
+   </children>
+</AnchorPane>

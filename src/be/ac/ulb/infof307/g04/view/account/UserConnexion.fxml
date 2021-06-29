@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.account.UserConnexionController">
+   <children>
+      <GridPane alignment="center" hgap="10" layoutX="10.0" layoutY="53.0" prefHeight="347.0" prefWidth="340.0" vgap="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+         <padding>
+            <Insets bottom="10" left="25" right="25" top="25" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+            <Label text="Utilisateur" />
+            <Label fx:id="noUserFoundLabel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <TextField fx:id="usernameField" promptText="Utilisateur" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label text="Mot de Passe" GridPane.rowIndex="2" />
+            <Label fx:id="wrongPasswordLabel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passwordField" promptText="Mot de Passe" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Button fx:id="ConnexionButton" minWidth="70.0" mnemonicParsing="false" onAction="#handleConnexion" text="Connexion" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#handleQuit" text="Quitter" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label text="Vous n'avez pas de compte ?" GridPane.rowIndex="6" />
+            <Hyperlink onAction="#handleCreateAccount" text="Cliquez ici" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="139.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/sign-in.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

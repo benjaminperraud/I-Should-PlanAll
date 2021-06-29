@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.view.importExport.ImportExportViewController">
+   <children>
+      <TabPane layoutX="67.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Importation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                      <Button layoutX="40.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleImportFromComputer" text="Importer depuis l'ordinateur" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="23.0" />
+                        <ToggleButton fx:id="driveImportButton" layoutX="289.0" layoutY="23.0" mnemonicParsing="false" onAction="#displayAvailableDriveFiles" text="Google Drive" />
+                        <ToggleButton fx:id="dropboxImportButton" layoutX="430.0" layoutY="23.0" mnemonicParsing="false" onAction="#displayAvailableDropboxFiles" text="Dropbox" />
+                        <ListView fx:id="listProjectsImport" layoutX="23.0" layoutY="75.0" prefHeight="250.0" prefWidth="550.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0" />
+                        <Button layoutX="494.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleImport" text="Importer" />
+                        <Button layoutX="403.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleCancel" text="Annuler" />
+                        <Button fx:id="helpButton" layoutX="47.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleHelp" text="Aide" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Exportation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listProjectsExport" layoutX="21.0" layoutY="56.0" prefHeight="250.0" prefWidth="550.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="75.0" />
+                        <Button layoutX="47.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleExportToComputer" text="Exporter sur l'ordinateur" />
+                        <Button layoutX="280.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleExportToGoogleDrive" text="Google Drive" />
+                        <Button layoutX="428.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleExportToDropbox" text="Dropbox" />
+                        <Button layoutX="491.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleCancel" text="Annuler" />
+                         <Button fx:id="helpButton2" layoutX="47.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleHelp" text="Aide" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
