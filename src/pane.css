@@ -1,0 +1,10 @@
+/*.pane{*/
+/*    -fx-background-color: blue;*/
+/*    !*-fx-color: #8fbc8f;*!*/
+/*}*/
+
+
+.pane{
+    -fx-background-color:  black;
+    -fx-color:  black;
+}

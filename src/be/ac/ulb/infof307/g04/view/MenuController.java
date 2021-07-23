@@ -7,9 +7,12 @@ import be.ac.ulb.infof307.g04.model.exceptions.UserExceptions;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import java.time.LocalDate;
@@ -40,12 +43,18 @@ public class MenuController {
     private Text textError;
     @FXML
     private Label noProjLabel;
+    @FXML
+    private Pane myPane;
+    @FXML
+    private StackPane myStackPane;
 
 
     /**
      * Initializes the controller class. This method is automatically called after the fxml file has been loaded.
      */
     public void initialize() {
+        myPane.setBackground(new Background(new BackgroundFill(Color.DARKGREY, CornerRadii.EMPTY, Insets.EMPTY)));
+        myStackPane.setBackground(new Background(new BackgroundFill(Color.DARKGREY, CornerRadii.EMPTY, Insets.EMPTY)));
         textError.setText("");
         accordionListProjects.expandedPaneProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -95,7 +104,6 @@ public class MenuController {
     public void handleEditProfileAction(){
         textError.setText("");
         userListener.showEditProfile();
-        textError.setText("Votre profil à bien été mis à jours avec vos dernières données sauvegardées");
     }
 
     /** JavaFX
@@ -151,7 +159,7 @@ public class MenuController {
     public void addNewProject(String title, String description, LocalDate endDate) throws UserExceptions {
         addProjectToPanel(mainListener.createNewPaneProject(title, description, endDate));
         noProjLabel.setText(null);
-        textError.setText("Un nouveau projet < " + title + " > à bien été rajouté");
+        textError.setText("Un nouveau projet < "+ title +" > à bien été rajouté");
     }
 
     /** JavaFX

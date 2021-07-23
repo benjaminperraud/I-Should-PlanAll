@@ -2,6 +2,7 @@ package be.ac.ulb.infof307.g04.view.account;
 
 import be.ac.ulb.infof307.g04.model.exceptions.UserExceptions;
 import be.ac.ulb.infof307.g04.util.TextFormat;
+import be.ac.ulb.infof307.g04.view.MenuController;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
